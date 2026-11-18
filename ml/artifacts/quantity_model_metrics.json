@@ -1,0 +1,179 @@
+{
+  "synthetic_label": "SYNTHETIC DATA. Fictional prototype; estimates are not engineering recommendations or an approved bill of materials.",
+  "model_version": "1.0.0",
+  "seed": 42,
+  "protocol": {
+    "cv": "5-fold project-level CV, stratified by category, 20 repeats",
+    "holdout": "latest 2 projects per category by start_date",
+    "metric_note": "APE = |estimate - approved| / approved; value_weighted_ape weights by preferred-supplier unit price"
+  },
+  "cross_validation": {
+    "naive_median": {
+      "median_ape": {
+        "mean": 0.3379099333658233,
+        "std": 0.0076556071293758235
+      },
+      "mean_ape": {
+        "mean": 0.6134237283808675,
+        "std": 0.012433572833057014
+      },
+      "within_10pct": {
+        "mean": 0.21633333333333332,
+        "std": 0.017079552427130842
+      },
+      "within_20pct": {
+        "mean": 0.32186666666666675,
+        "std": 0.023401424458068074
+      },
+      "value_weighted_ape": {
+        "mean": 0.5450048262196157,
+        "std": 0.021917785097394435
+      },
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.6732896973898866,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.3264876866232228,
+        "COOLING_SYSTEM_UPGRADE": 0.33333333333333326,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.251611722861437
+      }
+    },
+    "rule_baseline": {
+      "median_ape": {
+        "mean": 0.012411737812621703,
+        "std": 1.734723475976807e-18
+      },
+      "mean_ape": {
+        "mean": 0.06391270406155945,
+        "std": 0.0
+      },
+      "within_10pct": {
+        "mean": 0.7306666666666666,
+        "std": 1.1102230246251565e-16
+      },
+      "within_20pct": {
+        "mean": 0.9173333333333332,
+        "std": 1.1102230246251565e-16
+      },
+      "value_weighted_ape": {
+        "mean": 0.09739111755990654,
+        "std": 1.3877787807814457e-17
+      },
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.062012667206372184,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.03923076923076922,
+        "COOLING_SYSTEM_UPGRADE": 0.0,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.027014085337105122
+      }
+    },
+    "scale_model": {
+      "median_ape": {
+        "mean": 0.07098099014084597,
+        "std": 0.0025966174994453144
+      },
+      "mean_ape": {
+        "mean": 0.10643964368084771,
+        "std": 0.00320500826395667
+      },
+      "within_10pct": {
+        "mean": 0.5991333333333333,
+        "std": 0.006128621378417816
+      },
+      "within_20pct": {
+        "mean": 0.8506,
+        "std": 0.008049568656490575
+      },
+      "value_weighted_ape": {
+        "mean": 0.13440188048739082,
+        "std": 0.007515124852181516
+      },
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.08914071271304302,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.07038944401827622,
+        "COOLING_SYSTEM_UPGRADE": 0.04174246706341463,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.08723431920338681
+      }
+    },
+    "gbm": {
+      "median_ape": {
+        "mean": 0.21878392439264266,
+        "std": 0.010209664365182147
+      },
+      "mean_ape": {
+        "mean": 0.26300858103002384,
+        "std": 0.010159110789567754
+      },
+      "within_10pct": {
+        "mean": 0.29246666666666665,
+        "std": 0.015139499478002706
+      },
+      "within_20pct": {
+        "mean": 0.4762666666666667,
+        "std": 0.01578522515941199
+      },
+      "value_weighted_ape": {
+        "mean": 0.19819680001287737,
+        "std": 0.011427071306339562
+      },
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.16257932650205675,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.23473695968576586,
+        "COOLING_SYSTEM_UPGRADE": 0.20407482768245266,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.2436957936269566
+      }
+    }
+  },
+  "time_holdout": {
+    "naive_median": {
+      "median_ape": 0.42857142857142855,
+      "mean_ape": 0.5500741141407224,
+      "within_10pct": 0.12,
+      "within_20pct": 0.18666666666666668,
+      "value_weighted_ape": 0.4042954526980216,
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.7855464159811987,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.3061918846295115,
+        "COOLING_SYSTEM_UPGRADE": 0.5,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.625
+      }
+    },
+    "rule_baseline": {
+      "median_ape": 0.0,
+      "mean_ape": 0.061055688765321345,
+      "within_10pct": 0.72,
+      "within_20pct": 0.9333333333333333,
+      "value_weighted_ape": 0.12943087657703914,
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.06697272046855562,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.039230769230769236,
+        "COOLING_SYSTEM_UPGRADE": 0.0,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.02571595558153128
+      }
+    },
+    "scale_model": {
+      "median_ape": 0.07801375020321558,
+      "mean_ape": 0.10789150255541244,
+      "within_10pct": 0.58,
+      "within_20pct": 0.8466666666666667,
+      "value_weighted_ape": 0.17672134915133245,
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.09817820762928296,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.07075455641443873,
+        "COOLING_SYSTEM_UPGRADE": 0.0578626514103693,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.10839703112883568
+      }
+    },
+    "gbm": {
+      "median_ape": 0.24395051827353345,
+      "mean_ape": 0.30269120472790156,
+      "within_10pct": 0.3,
+      "within_20pct": 0.4533333333333333,
+      "value_weighted_ape": 0.25535187456129405,
+      "by_category_median_ape": {
+        "BLAST_FURNACE_UPGRADE": 0.15890419622976729,
+        "CONVEYOR_SYSTEM_INSTALLATION": 0.3172799422799423,
+        "COOLING_SYSTEM_UPGRADE": 0.0989454094292804,
+        "ELECTRICAL_MAINTENANCE_PROJECT": 0.3124343182013955
+      }
+    }
+  },
+  "holdout_projects": 8
+}

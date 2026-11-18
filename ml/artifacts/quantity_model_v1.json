@@ -1,0 +1,693 @@
+{
+  "model_version": "1.0.0",
+  "model_type": "per_material_scale_model",
+  "synthetic_label": "SYNTHETIC DATA. Fictional prototype; estimates are not engineering recommendations or an approved bill of materials.",
+  "trained_on": {
+    "completed_projects": 40,
+    "lines": 750,
+    "projects_per_category": {
+      "BLAST_FURNACE_UPGRADE": 10,
+      "CONVEYOR_SYSTEM_INSTALLATION": 10,
+      "COOLING_SYSTEM_UPGRADE": 10,
+      "ELECTRICAL_MAINTENANCE_PROJECT": 10
+    }
+  },
+  "features": [
+    "category_code",
+    "material",
+    "scale (band rank or metres/items/kW)"
+  ],
+  "target": "approved_quantity",
+  "scale_ranges": {
+    "BLAST_FURNACE_UPGRADE": [
+      0.0,
+      2.0
+    ],
+    "CONVEYOR_SYSTEM_INSTALLATION": [
+      350.0,
+      2350.0
+    ],
+    "COOLING_SYSTEM_UPGRADE": [
+      600.0,
+      5600.0
+    ],
+    "ELECTRICAL_MAINTENANCE_PROJECT": [
+      18.0,
+      123.0
+    ]
+  },
+  "intervals": {
+    "BLAST_FURNACE_UPGRADE": {
+      "p10": 0.8333333333333334,
+      "p90": 1.1481769645587958
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION": {
+      "p10": 0.8456112378487445,
+      "p90": 1.2154125212994016
+    },
+    "COOLING_SYSTEM_UPGRADE": {
+      "p10": 0.8284610418138012,
+      "p90": 1.203078638907007
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT": {
+      "p10": 0.8482769822420958,
+      "p90": 1.2195042671667964
+    }
+  },
+  "interval_note": "empirical p10/p90 of actual/estimate from out-of-fold predictions",
+  "materials": {
+    "9": {
+      "code": "CON-001",
+      "uom": "m"
+    },
+    "10": {
+      "code": "CON-002",
+      "uom": "ea"
+    },
+    "11": {
+      "code": "CON-003",
+      "uom": "ea"
+    },
+    "12": {
+      "code": "CON-004",
+      "uom": "ea"
+    },
+    "13": {
+      "code": "CON-005",
+      "uom": "ea"
+    },
+    "14": {
+      "code": "CON-006",
+      "uom": "ea"
+    },
+    "15": {
+      "code": "CON-007",
+      "uom": "ea"
+    },
+    "16": {
+      "code": "CON-008",
+      "uom": "ea"
+    },
+    "17": {
+      "code": "CON-009",
+      "uom": "ea"
+    },
+    "18": {
+      "code": "CON-010",
+      "uom": "m"
+    },
+    "19": {
+      "code": "CON-011",
+      "uom": "ea"
+    },
+    "20": {
+      "code": "ELE-001",
+      "uom": "m"
+    },
+    "21": {
+      "code": "ELE-002",
+      "uom": "m"
+    },
+    "22": {
+      "code": "ELE-003",
+      "uom": "ea"
+    },
+    "23": {
+      "code": "ELE-004",
+      "uom": "ea"
+    },
+    "24": {
+      "code": "ELE-005",
+      "uom": "ea"
+    },
+    "25": {
+      "code": "ELE-006",
+      "uom": "ea"
+    },
+    "26": {
+      "code": "ELE-007",
+      "uom": "ea"
+    },
+    "27": {
+      "code": "ELE-008",
+      "uom": "ea"
+    },
+    "28": {
+      "code": "ELE-009",
+      "uom": "ea"
+    },
+    "29": {
+      "code": "ELE-010",
+      "uom": "m"
+    },
+    "30": {
+      "code": "ELE-011",
+      "uom": "ea"
+    },
+    "31": {
+      "code": "ELE-012",
+      "uom": "ea"
+    },
+    "32": {
+      "code": "SHR-001",
+      "uom": "ea"
+    },
+    "33": {
+      "code": "CLG-001",
+      "uom": "ea"
+    },
+    "34": {
+      "code": "CLG-002",
+      "uom": "ea"
+    },
+    "35": {
+      "code": "CLG-003",
+      "uom": "m"
+    },
+    "36": {
+      "code": "CLG-004",
+      "uom": "ea"
+    },
+    "37": {
+      "code": "CLG-005",
+      "uom": "ea"
+    },
+    "38": {
+      "code": "CLG-006",
+      "uom": "ea"
+    },
+    "39": {
+      "code": "CLG-007",
+      "uom": "ea"
+    },
+    "40": {
+      "code": "CLG-008",
+      "uom": "ea"
+    },
+    "41": {
+      "code": "CLG-009",
+      "uom": "ea"
+    },
+    "42": {
+      "code": "CLG-010",
+      "uom": "ea"
+    },
+    "43": {
+      "code": "CLG-011",
+      "uom": "ea"
+    },
+    "44": {
+      "code": "CLG-012",
+      "uom": "ea"
+    },
+    "45": {
+      "code": "CLG-013",
+      "uom": "ea"
+    },
+    "46": {
+      "code": "CLG-014",
+      "uom": "L"
+    },
+    "1": {
+      "code": "REF-001",
+      "uom": "kg"
+    },
+    "2": {
+      "code": "REF-002",
+      "uom": "kg"
+    },
+    "3": {
+      "code": "REF-003",
+      "uom": "ea"
+    },
+    "4": {
+      "code": "REF-004",
+      "uom": "kg"
+    },
+    "5": {
+      "code": "REF-005",
+      "uom": "kg"
+    },
+    "6": {
+      "code": "REF-006",
+      "uom": "ea"
+    },
+    "7": {
+      "code": "REF-007",
+      "uom": "ea"
+    },
+    "8": {
+      "code": "REF-008",
+      "uom": "kg"
+    }
+  },
+  "coefficients": {
+    "BLAST_FURNACE_UPGRADE|1": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        7805.25,
+        21137.666666666668,
+        40840.333333333336
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|2": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        3887.0,
+        11230.333333333334,
+        27448.333333333332
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|3": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        3183.75,
+        9648.0,
+        19557.0
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|4": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        599.5,
+        1418.6666666666667,
+        3264.6666666666665
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|5": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        903.75,
+        2639.0,
+        6045.666666666667
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|6": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        795.0,
+        2114.6666666666665,
+        5052.0
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|7": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        5.75,
+        14.666666666666666,
+        33.666666666666664
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|8": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        5178.5,
+        14496.0,
+        36894.0
+      ]
+    },
+    "BLAST_FURNACE_UPGRADE|45": {
+      "type": "band_mean",
+      "x": [
+        0.0,
+        1.0,
+        2.0
+      ],
+      "y": [
+        3.75,
+        9.666666666666666,
+        20.333333333333332
+      ]
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|9": {
+      "type": "linear",
+      "a": 52.6596399999996,
+      "b": 1.9924968000000003
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|10": {
+      "type": "linear",
+      "a": -32.35760000000026,
+      "b": 0.6754880000000001
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|11": {
+      "type": "linear",
+      "a": -12.576400000000113,
+      "b": 0.33343200000000006
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|12": {
+      "type": "linear",
+      "a": 0.7423999999999952,
+      "b": 0.021488
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|13": {
+      "type": "linear",
+      "a": 1.0,
+      "b": -2.7820005985702583e-19
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|14": {
+      "type": "linear",
+      "a": 1.0,
+      "b": -2.7820005985702583e-19
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|15": {
+      "type": "linear",
+      "a": 1.3095999999999999,
+      "b": 0.0007519999999999998
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|16": {
+      "type": "linear",
+      "a": 5.5236,
+      "b": 0.009432000000000001
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|17": {
+      "type": "linear",
+      "a": 1.7375999999999991,
+      "b": 0.004112
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|18": {
+      "type": "linear",
+      "a": 3.7437599999999702,
+      "b": 0.29541120000000004
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|19": {
+      "type": "linear",
+      "a": 1.455599999999997,
+      "b": 0.021272000000000003
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|20": {
+      "type": "linear",
+      "a": 73.81624000000001,
+      "b": 0.5639888000000001
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|21": {
+      "type": "linear",
+      "a": 97.56391999999977,
+      "b": 1.1497904
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|22": {
+      "type": "linear",
+      "a": 1.5364,
+      "b": 0.0037679999999999996
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|23": {
+      "type": "linear",
+      "a": 1.5927999999999989,
+      "b": 0.003936
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|24": {
+      "type": "linear",
+      "a": 1.9199999999999993,
+      "b": 0.0044
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|25": {
+      "type": "linear",
+      "a": 1.2587999999999995,
+      "b": 0.0008559999999999998
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|26": {
+      "type": "linear",
+      "a": 35.85719999999998,
+      "b": 0.101064
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|27": {
+      "type": "linear",
+      "a": 13.15959999999999,
+      "b": 0.027751999999999995
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|28": {
+      "type": "linear",
+      "a": 28.01919999999997,
+      "b": 0.079504
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|29": {
+      "type": "linear",
+      "a": 10.608679999999831,
+      "b": 0.5042216
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|30": {
+      "type": "linear",
+      "a": 2.363599999999998,
+      "b": 0.010232000000000002
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|31": {
+      "type": "linear",
+      "a": 13.7016,
+      "b": 0.007791999999999998
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION|32": {
+      "type": "linear",
+      "a": 0.9107999999999993,
+      "b": 0.001096
+    },
+    "COOLING_SYSTEM_UPGRADE|20": {
+      "type": "linear",
+      "a": 38.4241455078125,
+      "b": 0.05215730794270833
+    },
+    "COOLING_SYSTEM_UPGRADE|21": {
+      "type": "linear",
+      "a": 66.43146972656251,
+      "b": 0.08049943033854168
+    },
+    "COOLING_SYSTEM_UPGRADE|22": {
+      "type": "linear",
+      "a": 2.463378906249999,
+      "b": 0.0007893880208333333
+    },
+    "COOLING_SYSTEM_UPGRADE|23": {
+      "type": "linear",
+      "a": 1.9140624999999996,
+      "b": 0.0009635416666666666
+    },
+    "COOLING_SYSTEM_UPGRADE|24": {
+      "type": "linear",
+      "a": 1.6337890624999998,
+      "b": 0.0012272135416666666
+    },
+    "COOLING_SYSTEM_UPGRADE|25": {
+      "type": "linear",
+      "a": 1.1633300781249996,
+      "b": 0.00047932942708333324
+    },
+    "COOLING_SYSTEM_UPGRADE|26": {
+      "type": "linear",
+      "a": 16.548828125000014,
+      "b": 0.036725260416666655
+    },
+    "COOLING_SYSTEM_UPGRADE|27": {
+      "type": "linear",
+      "a": 11.176269531250004,
+      "b": 0.009311523437499998
+    },
+    "COOLING_SYSTEM_UPGRADE|28": {
+      "type": "linear",
+      "a": 23.871826171874993,
+      "b": 0.01776285807291666
+    },
+    "COOLING_SYSTEM_UPGRADE|29": {
+      "type": "linear",
+      "a": 19.483837890625004,
+      "b": 0.018203938802083333
+    },
+    "COOLING_SYSTEM_UPGRADE|30": {
+      "type": "linear",
+      "a": 2.3303222656249996,
+      "b": 0.0008797200520833335
+    },
+    "COOLING_SYSTEM_UPGRADE|31": {
+      "type": "linear",
+      "a": 6.483886718749998,
+      "b": 0.006013997395833334
+    },
+    "COOLING_SYSTEM_UPGRADE|32": {
+      "type": "linear",
+      "a": 2.0722656249999987,
+      "b": 0.0005533854166666665
+    },
+    "COOLING_SYSTEM_UPGRADE|33": {
+      "type": "linear",
+      "a": 2.0722656249999987,
+      "b": 0.0005533854166666665
+    },
+    "COOLING_SYSTEM_UPGRADE|34": {
+      "type": "linear",
+      "a": 1.0507812499999998,
+      "b": 0.0007942708333333334
+    },
+    "COOLING_SYSTEM_UPGRADE|35": {
+      "type": "linear",
+      "a": 44.20871582031248,
+      "b": 0.04851212565104167
+    },
+    "COOLING_SYSTEM_UPGRADE|36": {
+      "type": "linear",
+      "a": 3.7993164062499987,
+      "b": 0.003992513020833332
+    },
+    "COOLING_SYSTEM_UPGRADE|37": {
+      "type": "linear",
+      "a": 2.5893554687499987,
+      "b": 0.0007405598958333335
+    },
+    "COOLING_SYSTEM_UPGRADE|38": {
+      "type": "linear",
+      "a": 1.593017578124999,
+      "b": 0.00066162109375
+    },
+    "COOLING_SYSTEM_UPGRADE|39": {
+      "type": "linear",
+      "a": 0.8552246093749992,
+      "b": 0.00067626953125
+    },
+    "COOLING_SYSTEM_UPGRADE|40": {
+      "type": "linear",
+      "a": 1.0507812499999998,
+      "b": 0.0007942708333333334
+    },
+    "COOLING_SYSTEM_UPGRADE|41": {
+      "type": "linear",
+      "a": 18.94067382812496,
+      "b": 0.049945475260416664
+    },
+    "COOLING_SYSTEM_UPGRADE|42": {
+      "type": "linear",
+      "a": 6.395996093749999,
+      "b": 0.002908528645833334
+    },
+    "COOLING_SYSTEM_UPGRADE|43": {
+      "type": "linear",
+      "a": 0.9433593749999999,
+      "b": 0.00033203124999999986
+    },
+    "COOLING_SYSTEM_UPGRADE|44": {
+      "type": "linear",
+      "a": 4.166992187499998,
+      "b": 0.0037337239583333324
+    },
+    "COOLING_SYSTEM_UPGRADE|45": {
+      "type": "linear",
+      "a": 3.89990234375,
+      "b": 0.002713216145833333
+    },
+    "COOLING_SYSTEM_UPGRADE|46": {
+      "type": "linear",
+      "a": 71.13598632812501,
+      "b": 0.09184651692708334
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|20": {
+      "type": "linear",
+      "a": 15.676180530230354,
+      "b": 4.292727292820121
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|21": {
+      "type": "linear",
+      "a": 27.432647062073972,
+      "b": 6.574373680778878
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|22": {
+      "type": "linear",
+      "a": 0.5514924465957218,
+      "b": 0.16300323796262528
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|23": {
+      "type": "linear",
+      "a": 0.24611831272309817,
+      "b": 0.23172982351446025
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|24": {
+      "type": "linear",
+      "a": 1.4629844511487617,
+      "b": 0.21118588999767923
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|25": {
+      "type": "linear",
+      "a": -0.050017129153818826,
+      "b": 0.050702295306611855
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|26": {
+      "type": "linear",
+      "a": 36.2022013725426,
+      "b": 3.806517919305109
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|27": {
+      "type": "linear",
+      "a": 4.244294886671344,
+      "b": 1.5968128722828188
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|28": {
+      "type": "linear",
+      "a": 14.231453546840028,
+      "b": 3.058791676336349
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|29": {
+      "type": "linear",
+      "a": -2.279978781951348,
+      "b": 1.4113881245234225
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|30": {
+      "type": "linear",
+      "a": 1.2135176651305752,
+      "b": 0.21351766513056833
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|31": {
+      "type": "linear",
+      "a": 7.872150206102429,
+      "b": 1.01603509818873
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|32": {
+      "type": "linear",
+      "a": -0.8748908707135634,
+      "b": 0.0963321508691664
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|44": {
+      "type": "linear",
+      "a": 0.6564775829106317,
+      "b": 0.05216103614804009
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT|45": {
+      "type": "linear",
+      "a": -0.2987213915503524,
+      "b": 0.11854479550000555
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.venv/
+**/.venv/
+**/node_modules/
+__pycache__/
+*.py[cod]
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.tanstack/
+frontend/.output/
+frontend/dist/
+data/generated/
+ml/heldout_demo/data/
+cloudflared.exe

@@ -1,0 +1,1539 @@
+{
+  "synthetic_data_label": "SYNTHETIC DATA. Fictional prototype seed data only. All records, quantities, prices, rules and dates are synthetic assumptions. Not an approved bill of materials, not an engineering recommendation, and not derived from any real company's data.",
+  "is_synthetic": true,
+  "generator": "generate_dataset.py",
+  "generator_version": "1.1.0",
+  "seed": 42,
+  "as_of_date": "2026-10-30",
+  "configuration": {
+    "seed": 42,
+    "output_dir": "data/generated/v1",
+    "catalogue_path": "SupplyChain_AI_Project_Overview.md",
+    "as_of_date": "2026-10-30",
+    "history_years": 3,
+    "completed_projects_per_category": 10,
+    "active_projects": 5,
+    "active_projects_by_category": null,
+    "departments": [
+      {
+        "code": "MECH",
+        "name": "Mechanical"
+      },
+      {
+        "code": "ELEC",
+        "name": "Electrical"
+      },
+      {
+        "code": "MAINT",
+        "name": "Maintenance"
+      },
+      {
+        "code": "PROC",
+        "name": "Procurement"
+      },
+      {
+        "code": "OPS",
+        "name": "Operations"
+      }
+    ],
+    "warehouse_count": 3,
+    "supplier_count": 8,
+    "users_per_department": 4,
+    "suppliers_per_material": 2,
+    "currency_code": "INR",
+    "rule_version": "v1-synthetic",
+    "category_departments": {
+      "BLAST_FURNACE_UPGRADE": [
+        "OPS",
+        "MECH"
+      ],
+      "CONVEYOR_SYSTEM_INSTALLATION": [
+        "MECH",
+        "OPS"
+      ],
+      "ELECTRICAL_MAINTENANCE_PROJECT": [
+        "ELEC",
+        "MAINT"
+      ],
+      "COOLING_SYSTEM_UPGRADE": [
+        "MECH",
+        "MAINT"
+      ]
+    },
+    "furnace_bands": [
+      "Small",
+      "Medium",
+      "Large"
+    ],
+    "scale_ranges": {
+      "CONVEYOR_SYSTEM_INSTALLATION": {
+        "min": 200,
+        "max": 3000,
+        "step": 50
+      },
+      "ELECTRICAL_MAINTENANCE_PROJECT": {
+        "min": 10,
+        "max": 150,
+        "step": 1
+      },
+      "COOLING_SYSTEM_UPGRADE": {
+        "min": 500,
+        "max": 6000,
+        "step": 100
+      }
+    },
+    "duration_days": {
+      "BLAST_FURNACE_UPGRADE": [
+        120,
+        300
+      ],
+      "CONVEYOR_SYSTEM_INSTALLATION": [
+        45,
+        150
+      ],
+      "ELECTRICAL_MAINTENANCE_PROJECT": [
+        20,
+        90
+      ],
+      "COOLING_SYSTEM_UPGRADE": [
+        60,
+        180
+      ]
+    },
+    "active_progress_range": [
+      0.2,
+      0.7
+    ],
+    "first_project_offset_days": 45,
+    "completed_end_buffer_days": 14,
+    "need_by_fraction_range": [
+      0.05,
+      0.85
+    ],
+    "variation": {
+      "project_factor_sigma": 0.08,
+      "line_noise_sigma": 0.1,
+      "head_edit_probability": 0.7,
+      "reviewer_adjust_probability": 0.15,
+      "reviewer_adjust_range": [
+        0.03,
+        0.1
+      ]
+    },
+    "consumption": {
+      "completed_fraction_range": [
+        0.92,
+        1.0
+      ],
+      "max_chunks": 3,
+      "active_pending_line_probability": 0.2,
+      "active_pending_allocated_fraction_range": [
+        0.0,
+        0.5
+      ]
+    },
+    "inventory": {
+      "opening_fraction_range": [
+        0.3,
+        0.8
+      ],
+      "split_across_warehouses": true,
+      "min_split_fraction": 0.25,
+      "replenishment_enabled": true,
+      "review_interval_days": 7,
+      "replenishment_cover_days": 20,
+      "safety_stock_days": 14,
+      "overbuy_range": [
+        1.0,
+        1.4
+      ],
+      "alternate_supplier_probability": 0.2,
+      "partial_receipt_probability": 0.35,
+      "late_delivery_probability": 0.4,
+      "max_late_days": 7,
+      "min_delivery_buffer_days": 2,
+      "open_po_partial_receipt_probability": 0.4,
+      "po_price_jitter": [
+        0.97,
+        1.03
+      ]
+    },
+    "quantity_decimals": {
+      "ea": 0,
+      "kg": 0,
+      "m": 1,
+      "L": 0
+    },
+    "moq_options_by_uom": {
+      "ea": [
+        1,
+        5,
+        10
+      ],
+      "kg": [
+        100,
+        250,
+        500
+      ],
+      "m": [
+        10,
+        50,
+        100
+      ],
+      "L": [
+        20,
+        50,
+        100
+      ]
+    },
+    "lead_time_days_by_material_category": {
+      "Refractory": [
+        21,
+        60
+      ],
+      "Mechanical spare": [
+        30,
+        90
+      ],
+      "Instrumentation": [
+        14,
+        45
+      ],
+      "Structural material": [
+        21,
+        45
+      ],
+      "Conveyor spare": [
+        21,
+        75
+      ],
+      "Electrical component": [
+        7,
+        30
+      ],
+      "Mechanical/electrical spare": [
+        30,
+        75
+      ],
+      "Cooling equipment": [
+        30,
+        75
+      ],
+      "Piping": [
+        14,
+        45
+      ],
+      "Consumable": [
+        7,
+        21
+      ],
+      "Chemical": [
+        7,
+        21
+      ]
+    },
+    "default_lead_time_range": [
+      14,
+      45
+    ],
+    "price_spread": [
+      0.92,
+      1.1
+    ],
+    "material_base_prices": {
+      "REF-001": 85,
+      "REF-002": 160,
+      "REF-003": 420,
+      "REF-004": 140,
+      "REF-005": 95,
+      "REF-006": 180,
+      "REF-007": 14000,
+      "REF-008": 78,
+      "CON-001": 5200,
+      "CON-002": 3800,
+      "CON-003": 3200,
+      "CON-004": 7500,
+      "CON-005": 210000,
+      "CON-006": 150000,
+      "CON-007": 480000,
+      "CON-008": 9500,
+      "CON-009": 6200,
+      "CON-010": 850,
+      "CON-011": 4800,
+      "ELE-001": 780,
+      "ELE-002": 190,
+      "ELE-003": 18000,
+      "ELE-004": 7500,
+      "ELE-005": 3900,
+      "ELE-006": 145000,
+      "ELE-007": 120,
+      "ELE-008": 140,
+      "ELE-009": 45,
+      "ELE-010": 620,
+      "ELE-011": 2400,
+      "ELE-012": 260,
+      "SHR-001": 95000,
+      "CLG-001": 185000,
+      "CLG-002": 320000,
+      "CLG-003": 1900,
+      "CLG-004": 22000,
+      "CLG-005": 16000,
+      "CLG-006": 9000,
+      "CLG-007": 260000,
+      "CLG-008": 190000,
+      "CLG-009": 450,
+      "CLG-010": 2800,
+      "CLG-011": 42000,
+      "CLG-012": 1800,
+      "CLG-013": 3600,
+      "CLG-014": 210
+    },
+    "default_base_price": 1000,
+    "rules": {
+      "BLAST_FURNACE_UPGRADE": {
+        "REF-001": {
+          "small": 8000,
+          "medium": 20000,
+          "large": 45000
+        },
+        "REF-002": {
+          "small": 4000,
+          "medium": 11000,
+          "large": 26000
+        },
+        "REF-003": {
+          "small": 3000,
+          "medium": 9000,
+          "large": 20000
+        },
+        "REF-004": {
+          "small": 600,
+          "medium": 1500,
+          "large": 3200
+        },
+        "REF-005": {
+          "small": 1000,
+          "medium": 2500,
+          "large": 6000
+        },
+        "REF-006": {
+          "small": 800,
+          "medium": 2200,
+          "large": 5000
+        },
+        "REF-007": {
+          "small": 6,
+          "medium": 16,
+          "large": 36
+        },
+        "REF-008": {
+          "small": 5000,
+          "medium": 15000,
+          "large": 40000
+        },
+        "CLG-013": {
+          "small": 4,
+          "medium": 10,
+          "large": 20
+        }
+      },
+      "CONVEYOR_SYSTEM_INSTALLATION": {
+        "CON-001": {
+          "base": 20,
+          "per_unit": 2.05
+        },
+        "CON-002": {
+          "base": 4,
+          "per_unit": 0.67
+        },
+        "CON-003": {
+          "base": 2,
+          "per_unit": 0.33
+        },
+        "CON-004": {
+          "base": 3,
+          "per_unit": 0.02
+        },
+        "CON-005": {
+          "base": 1,
+          "per_unit": 0
+        },
+        "CON-006": {
+          "base": 1,
+          "per_unit": 0
+        },
+        "CON-007": {
+          "base": 1,
+          "per_unit": 0.001
+        },
+        "CON-008": {
+          "base": 4,
+          "per_unit": 0.01
+        },
+        "CON-009": {
+          "base": 2,
+          "per_unit": 0.004
+        },
+        "CON-010": {
+          "base": 10,
+          "per_unit": 0.3
+        },
+        "CON-011": {
+          "base": 2,
+          "per_unit": 0.02
+        },
+        "ELE-001": {
+          "base": 50,
+          "per_unit": 0.6
+        },
+        "ELE-002": {
+          "base": 80,
+          "per_unit": 1.1
+        },
+        "ELE-003": {
+          "base": 2,
+          "per_unit": 0.004
+        },
+        "ELE-004": {
+          "base": 2,
+          "per_unit": 0.004
+        },
+        "ELE-005": {
+          "base": 2,
+          "per_unit": 0.004
+        },
+        "ELE-006": {
+          "base": 1,
+          "per_unit": 0.001
+        },
+        "ELE-007": {
+          "base": 40,
+          "per_unit": 0.1
+        },
+        "ELE-008": {
+          "base": 12,
+          "per_unit": 0.03
+        },
+        "ELE-009": {
+          "base": 30,
+          "per_unit": 0.08
+        },
+        "ELE-010": {
+          "base": 20,
+          "per_unit": 0.5
+        },
+        "ELE-011": {
+          "base": 3,
+          "per_unit": 0.01
+        },
+        "ELE-012": {
+          "base": 12,
+          "per_unit": 0.01
+        },
+        "SHR-001": {
+          "base": 1,
+          "per_unit": 0.001
+        }
+      },
+      "ELECTRICAL_MAINTENANCE_PROJECT": {
+        "ELE-001": {
+          "base": 30,
+          "per_unit": 4.0
+        },
+        "ELE-002": {
+          "base": 40,
+          "per_unit": 6.0
+        },
+        "ELE-003": {
+          "base": 2,
+          "per_unit": 0.15
+        },
+        "ELE-004": {
+          "base": 2,
+          "per_unit": 0.2
+        },
+        "ELE-005": {
+          "base": 2,
+          "per_unit": 0.2
+        },
+        "ELE-006": {
+          "base": 0,
+          "per_unit": 0.05
+        },
+        "ELE-007": {
+          "base": 30,
+          "per_unit": 4.0
+        },
+        "ELE-008": {
+          "base": 10,
+          "per_unit": 1.5
+        },
+        "ELE-009": {
+          "base": 20,
+          "per_unit": 3.0
+        },
+        "ELE-010": {
+          "base": 10,
+          "per_unit": 1.2
+        },
+        "ELE-011": {
+          "base": 2,
+          "per_unit": 0.2
+        },
+        "ELE-012": {
+          "base": 10,
+          "per_unit": 1.0
+        },
+        "SHR-001": {
+          "base": 0,
+          "per_unit": 0.08
+        },
+        "CLG-012": {
+          "base": 1,
+          "per_unit": 0.05
+        },
+        "CLG-013": {
+          "base": 1,
+          "per_unit": 0.1
+        }
+      },
+      "COOLING_SYSTEM_UPGRADE": {
+        "CLG-001": {
+          "base": 2,
+          "per_unit": 0.0006
+        },
+        "CLG-002": {
+          "base": 1,
+          "per_unit": 0.0008
+        },
+        "CLG-003": {
+          "base": 30,
+          "per_unit": 0.06
+        },
+        "CLG-004": {
+          "base": 4,
+          "per_unit": 0.004
+        },
+        "CLG-005": {
+          "base": 2,
+          "per_unit": 0.001
+        },
+        "CLG-006": {
+          "base": 1,
+          "per_unit": 0.001
+        },
+        "CLG-007": {
+          "base": 1,
+          "per_unit": 0.0006
+        },
+        "CLG-008": {
+          "base": 1,
+          "per_unit": 0.0008
+        },
+        "CLG-009": {
+          "base": 20,
+          "per_unit": 0.05
+        },
+        "CLG-010": {
+          "base": 4,
+          "per_unit": 0.004
+        },
+        "CLG-011": {
+          "base": 1,
+          "per_unit": 0.0003
+        },
+        "CLG-012": {
+          "base": 4,
+          "per_unit": 0.004
+        },
+        "CLG-013": {
+          "base": 3,
+          "per_unit": 0.003
+        },
+        "CLG-014": {
+          "base": 50,
+          "per_unit": 0.1
+        },
+        "ELE-001": {
+          "base": 40,
+          "per_unit": 0.05
+        },
+        "ELE-002": {
+          "base": 60,
+          "per_unit": 0.08
+        },
+        "ELE-003": {
+          "base": 2,
+          "per_unit": 0.001
+        },
+        "ELE-004": {
+          "base": 2,
+          "per_unit": 0.001
+        },
+        "ELE-005": {
+          "base": 2,
+          "per_unit": 0.001
+        },
+        "ELE-006": {
+          "base": 1,
+          "per_unit": 0.0006
+        },
+        "ELE-007": {
+          "base": 30,
+          "per_unit": 0.03
+        },
+        "ELE-008": {
+          "base": 10,
+          "per_unit": 0.01
+        },
+        "ELE-009": {
+          "base": 20,
+          "per_unit": 0.02
+        },
+        "ELE-010": {
+          "base": 15,
+          "per_unit": 0.02
+        },
+        "ELE-011": {
+          "base": 2,
+          "per_unit": 0.001
+        },
+        "ELE-012": {
+          "base": 8,
+          "per_unit": 0.005
+        },
+        "SHR-001": {
+          "base": 2,
+          "per_unit": 0.0006
+        }
+      }
+    }
+  },
+  "import_order": [
+    "departments",
+    "roles",
+    "users",
+    "project_categories",
+    "material_categories",
+    "units_of_measure",
+    "materials",
+    "warehouses",
+    "suppliers",
+    "material_suppliers",
+    "project_category_material_rules",
+    "projects",
+    "project_requirement_versions",
+    "project_material_requirements",
+    "inventory",
+    "inventory_allocations",
+    "purchase_orders",
+    "purchase_order_lines",
+    "inventory_transactions"
+  ],
+  "tables": {
+    "departments": {
+      "file": "departments.csv",
+      "row_count": 5,
+      "sha256": "95598fa12a01861ddba838544367fa6ff2b3b9067762c5300ff5f24c7e95a208",
+      "columns": [
+        {
+          "name": "department_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "department_code",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "roles": {
+      "file": "roles.csv",
+      "row_count": 5,
+      "sha256": "0a49d87d26d815f4db69b2c8c0d92c366cd3da192915dd43f3120b6b89b51d50",
+      "columns": [
+        {
+          "name": "role_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "role_code",
+          "type": "VARCHAR(40)"
+        },
+        {
+          "name": "display_name",
+          "type": "VARCHAR(100)"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "users": {
+      "file": "users.csv",
+      "row_count": 20,
+      "sha256": "97a9f9bee9f5a8bbbf4129cc816ab557323f59acc6036fa5e95bb89e8e1797d6",
+      "columns": [
+        {
+          "name": "user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "employee_id",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "full_name",
+          "type": "VARCHAR(120)"
+        },
+        {
+          "name": "email",
+          "type": "VARCHAR(255)"
+        },
+        {
+          "name": "password_hash",
+          "type": "TEXT"
+        },
+        {
+          "name": "department_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "requested_role_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "assigned_role_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "account_status",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "approved_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "approved_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "project_categories": {
+      "file": "project_categories.csv",
+      "row_count": 4,
+      "sha256": "fda54f79367c83c21d934ec9a8d83fa5696975005ccb68c3e9e2963157ab5f8c",
+      "columns": [
+        {
+          "name": "project_category_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "category_code",
+          "type": "VARCHAR(50)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)"
+        },
+        {
+          "name": "scale_kind",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "scale_unit",
+          "type": "VARCHAR(20)"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        }
+      ]
+    },
+    "material_categories": {
+      "file": "material_categories.csv",
+      "row_count": 11,
+      "sha256": "dfdee9d654bf377f250772c906742b4755fbbc744be43c7c85f1a6e8c3a88d26",
+      "columns": [
+        {
+          "name": "material_category_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "category_code",
+          "type": "VARCHAR(50)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "units_of_measure": {
+      "file": "units_of_measure.csv",
+      "row_count": 4,
+      "sha256": "185c70061126b95d6fa05b324f19edb0a6ae717863e49813170c50a8ecfd7a01",
+      "columns": [
+        {
+          "name": "uom_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "uom_code",
+          "type": "VARCHAR(10)"
+        },
+        {
+          "name": "display_name",
+          "type": "VARCHAR(50)"
+        },
+        {
+          "name": "measurement_type",
+          "type": "VARCHAR(30)"
+        }
+      ]
+    },
+    "materials": {
+      "file": "materials.csv",
+      "row_count": 46,
+      "sha256": "0b7bb76b377ca2bf4eb2955cdae0518c99323bfb1a189c5daaf6a73675589157",
+      "columns": [
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "material_code",
+          "type": "VARCHAR(20)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)"
+        },
+        {
+          "name": "description",
+          "type": "TEXT"
+        },
+        {
+          "name": "material_category_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "base_uom_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "warehouses": {
+      "file": "warehouses.csv",
+      "row_count": 3,
+      "sha256": "d56ff4a8a13947c720e1659ccfea1de636b4365a5abdfed0c3cb499a505ad674",
+      "columns": [
+        {
+          "name": "warehouse_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "warehouse_code",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(100)"
+        },
+        {
+          "name": "location_description",
+          "type": "TEXT"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "suppliers": {
+      "file": "suppliers.csv",
+      "row_count": 8,
+      "sha256": "e2ff7fe0f1de268ea5fba47e470e66575c67225502d01e3894ff7b082f3184f6",
+      "columns": [
+        {
+          "name": "supplier_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "supplier_code",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(150)"
+        },
+        {
+          "name": "contact_name",
+          "type": "VARCHAR(120)"
+        },
+        {
+          "name": "contact_email",
+          "type": "VARCHAR(255)"
+        },
+        {
+          "name": "phone",
+          "type": "VARCHAR(40)"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "material_suppliers": {
+      "file": "material_suppliers.csv",
+      "row_count": 92,
+      "sha256": "4b1d59eb18150f6a5d1d999e192c8dc8595455b3f6f6c0e48f4fa03a1d0d933c",
+      "columns": [
+        {
+          "name": "material_supplier_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "supplier_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "supplier_item_code",
+          "type": "VARCHAR(50)"
+        },
+        {
+          "name": "lead_time_days",
+          "type": "INTEGER"
+        },
+        {
+          "name": "minimum_order_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "unit_price",
+          "type": "NUMERIC(14,2)"
+        },
+        {
+          "name": "currency_code",
+          "type": "CHAR(3)"
+        },
+        {
+          "name": "is_preferred",
+          "type": "BOOLEAN"
+        }
+      ]
+    },
+    "project_category_material_rules": {
+      "file": "project_category_material_rules.csv",
+      "row_count": 93,
+      "sha256": "15d461526829b4e661c34c75985ee7ab75730a247dcf8f9ad2f7b3ebd9431796",
+      "columns": [
+        {
+          "name": "rule_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "project_category_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "scale_band",
+          "type": "VARCHAR(10)"
+        },
+        {
+          "name": "base_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "quantity_per_scale_unit",
+          "type": "NUMERIC(14,6)"
+        },
+        {
+          "name": "rule_version",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "is_active",
+          "type": "BOOLEAN"
+        },
+        {
+          "name": "rationale",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "projects": {
+      "file": "projects.csv",
+      "row_count": 45,
+      "sha256": "0229f61bdc6d89a723ad80c8012b25010be28934a06ab84a47b9a41c71b8fafa",
+      "columns": [
+        {
+          "name": "project_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "project_code",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "name",
+          "type": "VARCHAR(200)"
+        },
+        {
+          "name": "idea_description",
+          "type": "TEXT"
+        },
+        {
+          "name": "project_category_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "department_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "project_head_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "created_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "scale_level",
+          "type": "VARCHAR(20)"
+        },
+        {
+          "name": "scale_value",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "equipment_count",
+          "type": "INTEGER"
+        },
+        {
+          "name": "start_date",
+          "type": "DATE"
+        },
+        {
+          "name": "end_date",
+          "type": "DATE"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(20)"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "project_requirement_versions": {
+      "file": "project_requirement_versions.csv",
+      "row_count": 45,
+      "sha256": "4617fbb2706ca04b448023e8a27ad8d44e8bbd8918282810fa566a067af67501",
+      "columns": [
+        {
+          "name": "requirement_version_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "project_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "version_number",
+          "type": "INTEGER"
+        },
+        {
+          "name": "review_status",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "prediction_method",
+          "type": "VARCHAR(60)"
+        },
+        {
+          "name": "generated_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "generated_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "reviewed_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "reviewed_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "review_note",
+          "type": "TEXT"
+        }
+      ]
+    },
+    "project_material_requirements": {
+      "file": "project_material_requirements.csv",
+      "row_count": 852,
+      "sha256": "725db7524789888f32e9f1a346e4def6ef299a4887425ec16ee55dcbf22a54d5",
+      "columns": [
+        {
+          "name": "requirement_line_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "requirement_version_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "line_number",
+          "type": "INTEGER"
+        },
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "predicted_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "proposed_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "approved_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "need_by_date",
+          "type": "DATE"
+        },
+        {
+          "name": "confidence_score",
+          "type": "NUMERIC(5,4)"
+        },
+        {
+          "name": "rationale",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "inventory": {
+      "file": "inventory.csv",
+      "row_count": 138,
+      "sha256": "8bef3bf1277b80b9782198fa6f0db3271a875b3b9dc3de191548026ff902a495",
+      "columns": [
+        {
+          "name": "inventory_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "warehouse_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "on_hand_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "safety_stock_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "reorder_point_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "updated_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "inventory_allocations": {
+      "file": "inventory_allocations.csv",
+      "row_count": 1022,
+      "sha256": "30c2af6014cbd7bed8c249ed34eb7a9efdfd52177cb3ada5ffdda491710eb83e",
+      "columns": [
+        {
+          "name": "allocation_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "requirement_line_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "warehouse_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "allocated_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "allocation_status",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "allocated_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "allocated_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "released_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "purchase_orders": {
+      "file": "purchase_orders.csv",
+      "row_count": 551,
+      "sha256": "dc8a97648ef429f5754de29943093ca4b71f85c13f64bd9268cb8f1189a0aedc",
+      "columns": [
+        {
+          "name": "purchase_order_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "po_number",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "supplier_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "warehouse_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "order_date",
+          "type": "DATE"
+        },
+        {
+          "name": "expected_delivery_date",
+          "type": "DATE"
+        },
+        {
+          "name": "actual_delivery_date",
+          "type": "DATE"
+        },
+        {
+          "name": "status",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    },
+    "purchase_order_lines": {
+      "file": "purchase_order_lines.csv",
+      "row_count": 632,
+      "sha256": "00c9d4f7ad4ee87d6a5739c8408563575a13af35133a5abeb72d679686b93cbf",
+      "columns": [
+        {
+          "name": "purchase_order_line_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "purchase_order_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "line_number",
+          "type": "INTEGER"
+        },
+        {
+          "name": "material_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "ordered_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "received_quantity",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "unit_price",
+          "type": "NUMERIC(14,2)"
+        },
+        {
+          "name": "expected_delivery_date",
+          "type": "DATE"
+        }
+      ]
+    },
+    "inventory_transactions": {
+      "file": "inventory_transactions.csv",
+      "row_count": 2855,
+      "sha256": "bb08e67de5d0ff9b812d14cb4d7454c719bda5681739a74dbe72caa0e0e347c4",
+      "columns": [
+        {
+          "name": "inventory_transaction_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "inventory_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "transaction_type",
+          "type": "VARCHAR(30)"
+        },
+        {
+          "name": "quantity_delta",
+          "type": "NUMERIC(14,3)"
+        },
+        {
+          "name": "occurred_at",
+          "type": "TIMESTAMPTZ"
+        },
+        {
+          "name": "project_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "requirement_line_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "allocation_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "purchase_order_line_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "recorded_by_user_id",
+          "type": "BIGINT"
+        },
+        {
+          "name": "reference_code",
+          "type": "VARCHAR(40)"
+        },
+        {
+          "name": "notes",
+          "type": "TEXT"
+        },
+        {
+          "name": "created_at",
+          "type": "TIMESTAMPTZ"
+        }
+      ]
+    }
+  },
+  "validation": {
+    "status": "passed",
+    "checks_passed": 114,
+    "checks": [
+      "departments: primary key unique, positive, non-null",
+      "roles: primary key unique, positive, non-null",
+      "users: primary key unique, positive, non-null",
+      "project_categories: primary key unique, positive, non-null",
+      "material_categories: primary key unique, positive, non-null",
+      "units_of_measure: primary key unique, positive, non-null",
+      "materials: primary key unique, positive, non-null",
+      "warehouses: primary key unique, positive, non-null",
+      "suppliers: primary key unique, positive, non-null",
+      "material_suppliers: primary key unique, positive, non-null",
+      "project_category_material_rules: primary key unique, positive, non-null",
+      "projects: primary key unique, positive, non-null",
+      "project_requirement_versions: primary key unique, positive, non-null",
+      "project_material_requirements: primary key unique, positive, non-null",
+      "inventory: primary key unique, positive, non-null",
+      "inventory_allocations: primary key unique, positive, non-null",
+      "purchase_orders: primary key unique, positive, non-null",
+      "purchase_order_lines: primary key unique, positive, non-null",
+      "inventory_transactions: primary key unique, positive, non-null",
+      "FK users.department_id -> departments.department_id",
+      "FK users.requested_role_id -> roles.role_id",
+      "FK users.assigned_role_id -> roles.role_id",
+      "FK users.approved_by_user_id -> users.user_id",
+      "FK materials.material_category_id -> material_categories.material_category_id",
+      "FK materials.base_uom_id -> units_of_measure.uom_id",
+      "FK material_suppliers.material_id -> materials.material_id",
+      "FK material_suppliers.supplier_id -> suppliers.supplier_id",
+      "FK project_category_material_rules.project_category_id -> project_categories.project_category_id",
+      "FK project_category_material_rules.material_id -> materials.material_id",
+      "FK projects.project_category_id -> project_categories.project_category_id",
+      "FK projects.department_id -> departments.department_id",
+      "FK projects.project_head_user_id -> users.user_id",
+      "FK projects.created_by_user_id -> users.user_id",
+      "FK project_requirement_versions.project_id -> projects.project_id",
+      "FK project_requirement_versions.generated_by_user_id -> users.user_id",
+      "FK project_requirement_versions.reviewed_by_user_id -> users.user_id",
+      "FK project_material_requirements.requirement_version_id -> project_requirement_versions.requirement_version_id",
+      "FK project_material_requirements.material_id -> materials.material_id",
+      "FK inventory.warehouse_id -> warehouses.warehouse_id",
+      "FK inventory.material_id -> materials.material_id",
+      "FK inventory_allocations.requirement_line_id -> project_material_requirements.requirement_line_id",
+      "FK inventory_allocations.warehouse_id -> warehouses.warehouse_id",
+      "FK inventory_allocations.allocated_by_user_id -> users.user_id",
+      "FK purchase_orders.supplier_id -> suppliers.supplier_id",
+      "FK purchase_orders.warehouse_id -> warehouses.warehouse_id",
+      "FK purchase_order_lines.purchase_order_id -> purchase_orders.purchase_order_id",
+      "FK purchase_order_lines.material_id -> materials.material_id",
+      "FK inventory_transactions.inventory_id -> inventory.inventory_id",
+      "FK inventory_transactions.project_id -> projects.project_id",
+      "FK inventory_transactions.requirement_line_id -> project_material_requirements.requirement_line_id",
+      "FK inventory_transactions.allocation_id -> inventory_allocations.allocation_id",
+      "FK inventory_transactions.purchase_order_line_id -> purchase_order_lines.purchase_order_line_id",
+      "FK inventory_transactions.recorded_by_user_id -> users.user_id",
+      "departments.department_code unique",
+      "roles.role_code unique",
+      "users.employee_id unique",
+      "users.email unique",
+      "project_categories.category_code unique",
+      "material_categories.category_code unique",
+      "units_of_measure.uom_code unique",
+      "materials.material_code unique",
+      "warehouses.warehouse_code unique",
+      "suppliers.supplier_code unique",
+      "projects.project_code unique",
+      "purchase_orders.po_number unique",
+      "inventory_transactions.reference_code unique",
+      "materials == catalogue (codes, order)",
+      "materials units == catalogue units",
+      "materials names == catalogue names",
+      "users: all Disabled with no usable credentials",
+      "users: reserved example.invalid emails",
+      "users: no generated ADMIN",
+      "rules: one row per category/material/band",
+      "rules: materials == catalogue candidates for each category",
+      "rules: positive base quantity, valid bands",
+      "projects: only Active/Completed generated",
+      "projects: completed per category == config",
+      "projects: >=1 active per category",
+      "projects: active count == config",
+      "projects: dates consistent",
+      "projects: scale fields match category",
+      "versions: one Approved version per project",
+      "versions: no fabricated forecast metadata",
+      "lines: materials allowed for project category",
+      "lines: quantities positive",
+      "lines: need_by within project window",
+      "lines: unique line_number per version",
+      "lines: 'ea' quantities are whole numbers",
+      "inventory: one row per warehouse/material",
+      "inventory: quantities >= 0",
+      "transactions: exactly one opening balance per inventory row",
+      "inventory.on_hand == opening + sum(deltas)",
+      "transactions: running on-hand never negative",
+      "transactions: type/sign rules",
+      "transactions: ids chronological",
+      "transactions: not after as-of date",
+      "allocations: positive",
+      "allocations: sum per line <= approved quantity",
+      "allocations: consumption <= allocation",
+      "allocations: status consistent",
+      "consumption tx: allocation, line, project, inventory row agree",
+      "consumption tx: project matches requirement line",
+      "allocations: outstanding <= physical on-hand",
+      "project status vs allocations: completed projects hold no Active allocations",
+      "allocations never exceed available stock at any point in time",
+      "PO lines: no over-receipt, quantities valid",
+      "PO lines: received == sum of receipt transactions",
+      "receipts link to correct PO line (material, warehouse)",
+      "receipts not before order date",
+      "PO dates consistent",
+      "PO status consistent with lines",
+      "PO lines: line_number unique per PO",
+      "material_suppliers: every material has a preferred supplier",
+      "material_suppliers: PO supplier supplies the material"
+    ]
+  },
+  "statistics": {
+    "inventory_rows": 138,
+    "rows_available_at_or_below_reorder_point": 1
+  },
+  "environment": {
+    "python": "3.12.3",
+    "pandas": "3.0.2",
+    "numpy": "2.4.4"
+  },
+  "notes": [
+    "Opening balances, safety stock and reorder points are synthetic values computed by the generator, not LLM-invented.",
+    "predicted_quantity is a deterministic synthetic rule baseline, not an ML forecast; confidence_score is intentionally NULL.",
+    "No forecast outputs, risk alerts, anomaly outputs or procurement recommendations are generated.",
+    "Generated users are disabled and have no usable credentials; no admin account is created."
+  ]
+}

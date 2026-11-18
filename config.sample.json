@@ -1,0 +1,626 @@
+{
+  "seed": 42,
+  "output_dir": "data/generated/v1",
+  "catalogue_path": "SupplyChain_AI_Project_Overview.md",
+  "as_of_date": "2026-10-30",
+  "history_years": 3,
+  "completed_projects_per_category": 10,
+  "active_projects": 5,
+  "active_projects_by_category": null,
+  "departments": [
+    {
+      "code": "MECH",
+      "name": "Mechanical"
+    },
+    {
+      "code": "ELEC",
+      "name": "Electrical"
+    },
+    {
+      "code": "MAINT",
+      "name": "Maintenance"
+    },
+    {
+      "code": "PROC",
+      "name": "Procurement"
+    },
+    {
+      "code": "OPS",
+      "name": "Operations"
+    }
+  ],
+  "warehouse_count": 3,
+  "supplier_count": 8,
+  "users_per_department": 4,
+  "suppliers_per_material": 2,
+  "currency_code": "INR",
+  "rule_version": "v1-synthetic",
+  "category_departments": {
+    "BLAST_FURNACE_UPGRADE": [
+      "OPS",
+      "MECH"
+    ],
+    "CONVEYOR_SYSTEM_INSTALLATION": [
+      "MECH",
+      "OPS"
+    ],
+    "ELECTRICAL_MAINTENANCE_PROJECT": [
+      "ELEC",
+      "MAINT"
+    ],
+    "COOLING_SYSTEM_UPGRADE": [
+      "MECH",
+      "MAINT"
+    ]
+  },
+  "furnace_bands": [
+    "Small",
+    "Medium",
+    "Large"
+  ],
+  "scale_ranges": {
+    "CONVEYOR_SYSTEM_INSTALLATION": {
+      "min": 200,
+      "max": 3000,
+      "step": 50
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT": {
+      "min": 10,
+      "max": 150,
+      "step": 1
+    },
+    "COOLING_SYSTEM_UPGRADE": {
+      "min": 500,
+      "max": 6000,
+      "step": 100
+    }
+  },
+  "duration_days": {
+    "BLAST_FURNACE_UPGRADE": [
+      120,
+      300
+    ],
+    "CONVEYOR_SYSTEM_INSTALLATION": [
+      45,
+      150
+    ],
+    "ELECTRICAL_MAINTENANCE_PROJECT": [
+      20,
+      90
+    ],
+    "COOLING_SYSTEM_UPGRADE": [
+      60,
+      180
+    ]
+  },
+  "active_progress_range": [
+    0.2,
+    0.7
+  ],
+  "first_project_offset_days": 45,
+  "completed_end_buffer_days": 14,
+  "need_by_fraction_range": [
+    0.05,
+    0.85
+  ],
+  "variation": {
+    "project_factor_sigma": 0.08,
+    "line_noise_sigma": 0.1,
+    "head_edit_probability": 0.7,
+    "reviewer_adjust_probability": 0.15,
+    "reviewer_adjust_range": [
+      0.03,
+      0.1
+    ]
+  },
+  "consumption": {
+    "completed_fraction_range": [
+      0.92,
+      1.0
+    ],
+    "max_chunks": 3,
+    "active_pending_line_probability": 0.2,
+    "active_pending_allocated_fraction_range": [
+      0.0,
+      0.5
+    ]
+  },
+  "inventory": {
+    "opening_fraction_range": [
+      0.3,
+      0.8
+    ],
+    "split_across_warehouses": true,
+    "min_split_fraction": 0.25,
+    "replenishment_enabled": true,
+    "review_interval_days": 7,
+    "replenishment_cover_days": 20,
+    "safety_stock_days": 14,
+    "overbuy_range": [
+      1.0,
+      1.4
+    ],
+    "alternate_supplier_probability": 0.2,
+    "partial_receipt_probability": 0.35,
+    "late_delivery_probability": 0.4,
+    "max_late_days": 7,
+    "min_delivery_buffer_days": 2,
+    "open_po_partial_receipt_probability": 0.4,
+    "po_price_jitter": [
+      0.97,
+      1.03
+    ]
+  },
+  "stress": {
+    "enabled": false,
+    "overbuy_range": [
+      1.0,
+      1.0
+    ],
+    "replenishment_cover_days": 0,
+    "review_interval_days": 21,
+    "recent_window_days": 35,
+    "recent_extra_delay_days": [
+      14,
+      45
+    ],
+    "active_pending_line_probability": 0.9,
+    "active_pending_allocated_fraction_range": [
+      0.0,
+      0.15
+    ],
+    "no_open_po_probability": 0.25,
+    "late_po_probability": 0.35,
+    "partial_po_probability": 0.3
+  },
+  "quantity_decimals": {
+    "ea": 0,
+    "kg": 0,
+    "m": 1,
+    "L": 0
+  },
+  "moq_options_by_uom": {
+    "ea": [
+      1,
+      5,
+      10
+    ],
+    "kg": [
+      100,
+      250,
+      500
+    ],
+    "m": [
+      10,
+      50,
+      100
+    ],
+    "L": [
+      20,
+      50,
+      100
+    ]
+  },
+  "lead_time_days_by_material_category": {
+    "Refractory": [
+      21,
+      60
+    ],
+    "Mechanical spare": [
+      30,
+      90
+    ],
+    "Instrumentation": [
+      14,
+      45
+    ],
+    "Structural material": [
+      21,
+      45
+    ],
+    "Conveyor spare": [
+      21,
+      75
+    ],
+    "Electrical component": [
+      7,
+      30
+    ],
+    "Mechanical/electrical spare": [
+      30,
+      75
+    ],
+    "Cooling equipment": [
+      30,
+      75
+    ],
+    "Piping": [
+      14,
+      45
+    ],
+    "Consumable": [
+      7,
+      21
+    ],
+    "Chemical": [
+      7,
+      21
+    ]
+  },
+  "default_lead_time_range": [
+    14,
+    45
+  ],
+  "price_spread": [
+    0.92,
+    1.1
+  ],
+  "material_base_prices": {
+    "REF-001": 85,
+    "REF-002": 160,
+    "REF-003": 420,
+    "REF-004": 140,
+    "REF-005": 95,
+    "REF-006": 180,
+    "REF-007": 14000,
+    "REF-008": 78,
+    "CON-001": 5200,
+    "CON-002": 3800,
+    "CON-003": 3200,
+    "CON-004": 7500,
+    "CON-005": 210000,
+    "CON-006": 150000,
+    "CON-007": 480000,
+    "CON-008": 9500,
+    "CON-009": 6200,
+    "CON-010": 850,
+    "CON-011": 4800,
+    "ELE-001": 780,
+    "ELE-002": 190,
+    "ELE-003": 18000,
+    "ELE-004": 7500,
+    "ELE-005": 3900,
+    "ELE-006": 145000,
+    "ELE-007": 120,
+    "ELE-008": 140,
+    "ELE-009": 45,
+    "ELE-010": 620,
+    "ELE-011": 2400,
+    "ELE-012": 260,
+    "SHR-001": 95000,
+    "CLG-001": 185000,
+    "CLG-002": 320000,
+    "CLG-003": 1900,
+    "CLG-004": 22000,
+    "CLG-005": 16000,
+    "CLG-006": 9000,
+    "CLG-007": 260000,
+    "CLG-008": 190000,
+    "CLG-009": 450,
+    "CLG-010": 2800,
+    "CLG-011": 42000,
+    "CLG-012": 1800,
+    "CLG-013": 3600,
+    "CLG-014": 210
+  },
+  "default_base_price": 1000,
+  "rules": {
+    "BLAST_FURNACE_UPGRADE": {
+      "REF-001": {
+        "small": 8000,
+        "medium": 20000,
+        "large": 45000
+      },
+      "REF-002": {
+        "small": 4000,
+        "medium": 11000,
+        "large": 26000
+      },
+      "REF-003": {
+        "small": 3000,
+        "medium": 9000,
+        "large": 20000
+      },
+      "REF-004": {
+        "small": 600,
+        "medium": 1500,
+        "large": 3200
+      },
+      "REF-005": {
+        "small": 1000,
+        "medium": 2500,
+        "large": 6000
+      },
+      "REF-006": {
+        "small": 800,
+        "medium": 2200,
+        "large": 5000
+      },
+      "REF-007": {
+        "small": 6,
+        "medium": 16,
+        "large": 36
+      },
+      "REF-008": {
+        "small": 5000,
+        "medium": 15000,
+        "large": 40000
+      },
+      "CLG-013": {
+        "small": 4,
+        "medium": 10,
+        "large": 20
+      }
+    },
+    "CONVEYOR_SYSTEM_INSTALLATION": {
+      "CON-001": {
+        "base": 20,
+        "per_unit": 2.05
+      },
+      "CON-002": {
+        "base": 4,
+        "per_unit": 0.67
+      },
+      "CON-003": {
+        "base": 2,
+        "per_unit": 0.33
+      },
+      "CON-004": {
+        "base": 3,
+        "per_unit": 0.02
+      },
+      "CON-005": {
+        "base": 1,
+        "per_unit": 0
+      },
+      "CON-006": {
+        "base": 1,
+        "per_unit": 0
+      },
+      "CON-007": {
+        "base": 1,
+        "per_unit": 0.001
+      },
+      "CON-008": {
+        "base": 4,
+        "per_unit": 0.01
+      },
+      "CON-009": {
+        "base": 2,
+        "per_unit": 0.004
+      },
+      "CON-010": {
+        "base": 10,
+        "per_unit": 0.3
+      },
+      "CON-011": {
+        "base": 2,
+        "per_unit": 0.02
+      },
+      "ELE-001": {
+        "base": 50,
+        "per_unit": 0.6
+      },
+      "ELE-002": {
+        "base": 80,
+        "per_unit": 1.1
+      },
+      "ELE-003": {
+        "base": 2,
+        "per_unit": 0.004
+      },
+      "ELE-004": {
+        "base": 2,
+        "per_unit": 0.004
+      },
+      "ELE-005": {
+        "base": 2,
+        "per_unit": 0.004
+      },
+      "ELE-006": {
+        "base": 1,
+        "per_unit": 0.001
+      },
+      "ELE-007": {
+        "base": 40,
+        "per_unit": 0.1
+      },
+      "ELE-008": {
+        "base": 12,
+        "per_unit": 0.03
+      },
+      "ELE-009": {
+        "base": 30,
+        "per_unit": 0.08
+      },
+      "ELE-010": {
+        "base": 20,
+        "per_unit": 0.5
+      },
+      "ELE-011": {
+        "base": 3,
+        "per_unit": 0.01
+      },
+      "ELE-012": {
+        "base": 12,
+        "per_unit": 0.01
+      },
+      "SHR-001": {
+        "base": 1,
+        "per_unit": 0.001
+      }
+    },
+    "ELECTRICAL_MAINTENANCE_PROJECT": {
+      "ELE-001": {
+        "base": 30,
+        "per_unit": 4.0
+      },
+      "ELE-002": {
+        "base": 40,
+        "per_unit": 6.0
+      },
+      "ELE-003": {
+        "base": 2,
+        "per_unit": 0.15
+      },
+      "ELE-004": {
+        "base": 2,
+        "per_unit": 0.2
+      },
+      "ELE-005": {
+        "base": 2,
+        "per_unit": 0.2
+      },
+      "ELE-006": {
+        "base": 0,
+        "per_unit": 0.05
+      },
+      "ELE-007": {
+        "base": 30,
+        "per_unit": 4.0
+      },
+      "ELE-008": {
+        "base": 10,
+        "per_unit": 1.5
+      },
+      "ELE-009": {
+        "base": 20,
+        "per_unit": 3.0
+      },
+      "ELE-010": {
+        "base": 10,
+        "per_unit": 1.2
+      },
+      "ELE-011": {
+        "base": 2,
+        "per_unit": 0.2
+      },
+      "ELE-012": {
+        "base": 10,
+        "per_unit": 1.0
+      },
+      "SHR-001": {
+        "base": 0,
+        "per_unit": 0.08
+      },
+      "CLG-012": {
+        "base": 1,
+        "per_unit": 0.05
+      },
+      "CLG-013": {
+        "base": 1,
+        "per_unit": 0.1
+      }
+    },
+    "COOLING_SYSTEM_UPGRADE": {
+      "CLG-001": {
+        "base": 2,
+        "per_unit": 0.0006
+      },
+      "CLG-002": {
+        "base": 1,
+        "per_unit": 0.0008
+      },
+      "CLG-003": {
+        "base": 30,
+        "per_unit": 0.06
+      },
+      "CLG-004": {
+        "base": 4,
+        "per_unit": 0.004
+      },
+      "CLG-005": {
+        "base": 2,
+        "per_unit": 0.001
+      },
+      "CLG-006": {
+        "base": 1,
+        "per_unit": 0.001
+      },
+      "CLG-007": {
+        "base": 1,
+        "per_unit": 0.0006
+      },
+      "CLG-008": {
+        "base": 1,
+        "per_unit": 0.0008
+      },
+      "CLG-009": {
+        "base": 20,
+        "per_unit": 0.05
+      },
+      "CLG-010": {
+        "base": 4,
+        "per_unit": 0.004
+      },
+      "CLG-011": {
+        "base": 1,
+        "per_unit": 0.0003
+      },
+      "CLG-012": {
+        "base": 4,
+        "per_unit": 0.004
+      },
+      "CLG-013": {
+        "base": 3,
+        "per_unit": 0.003
+      },
+      "CLG-014": {
+        "base": 50,
+        "per_unit": 0.1
+      },
+      "ELE-001": {
+        "base": 40,
+        "per_unit": 0.05
+      },
+      "ELE-002": {
+        "base": 60,
+        "per_unit": 0.08
+      },
+      "ELE-003": {
+        "base": 2,
+        "per_unit": 0.001
+      },
+      "ELE-004": {
+        "base": 2,
+        "per_unit": 0.001
+      },
+      "ELE-005": {
+        "base": 2,
+        "per_unit": 0.001
+      },
+      "ELE-006": {
+        "base": 1,
+        "per_unit": 0.0006
+      },
+      "ELE-007": {
+        "base": 30,
+        "per_unit": 0.03
+      },
+      "ELE-008": {
+        "base": 10,
+        "per_unit": 0.01
+      },
+      "ELE-009": {
+        "base": 20,
+        "per_unit": 0.02
+      },
+      "ELE-010": {
+        "base": 15,
+        "per_unit": 0.02
+      },
+      "ELE-011": {
+        "base": 2,
+        "per_unit": 0.001
+      },
+      "ELE-012": {
+        "base": 8,
+        "per_unit": 0.005
+      },
+      "SHR-001": {
+        "base": 2,
+        "per_unit": 0.0006
+      }
+    }
+  }
+}
